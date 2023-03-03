@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>かっこいいメニューバー</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Helvetica Neue', sans-serif;
+		}
+
+		nav {
+			background-color: #333;
+			height: 50px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 50px;
+		}
+
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+		}
+
+		nav ul li {
+			margin-left: 30px;
+		}
+
+		nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			transition: all 0.2s ease-in-out;
+		}
+
+		nav ul li a:hover {
+			color: #ffbf00;
+		}
+
+		nav ul li:last-child {
+			margin-right: 0;
+		}
+
+		nav ul li.active a {
+			color: #ffbf00;
+			font-weight: bold;
+		}
+
+		nav button {
+			background-color: #ffbf00;
+			color: #333;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+		}
+
+		nav button:hover {
+			background-color: #333;
+			color: #fff;
+		}
+
+		@media screen and (max-width: 768px) {
+			nav {
+				padding: 0 20px;
+			}
+
+			nav ul {
+				display: none;
+			}
+
+			nav button {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">会社概要</a></li>
+			<li><a href="#">サービス</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		<button>メニュー</button>
+	</nav>
+</body>
+</html>
