@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form要素</h1>
+    <form action="" method="get">
+        <label for="name">名前: </label>
+        <input type="text" name="name" id="name" /><br>
+        <label for="email">Eメールアドレス: </label>
+        <input type="email" name="email" id="email" /><br>
+        <label for="bloodtype">血液型: </label>
+        <input type="radio" name="bloodtype" id="bloodtype" value="A" />A型
+        <input type="radio" name="bloodtype" id="bloodtype" value="B" />B型
+        <input type="radio" name="bloodtype" id="bloodtype" value="O" />O型
+        <input type="radio" name="bloodtype" id="bloodtype" value="AB" />AB型<br>
+        <label for="food">好きな食べ物</label>
+        <select id="food" name="food">
+            <option value="ラーメン">ラーメン</option>
+            <option value="カレー">カレー</option>
+            <option value="焼肉">焼肉</option>
+            <option value="餃子">餃子</option>
+        </select>
+        <br>
+        <label>どのジャンルの本が好きですか?(2個以上選択可)</label><br>
+        <input type="checkbox" name="genre" value="novel">小説
+        <input type="checkbox" name="genre" value="non-fiction">ノンフィクション
+        <input type="checkbox" name="genre" value="sports">スポーツ
+        <input type="checkbox" name="genre" value="cooking">料理
+        <input type="checkbox" name="genre" value="photo">写真集
+        <br>
+        <label for="memo">感想</label><br>
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea> 
+        日付: <input type="date" name="date" id="date"><br>
+        色: <input type="color" name="color" id="color"><br>
+        ファイル: <input type="file" name="file" id="file"><br>
+        <input type="submit" value="送信"><br>
+    </form>
+</body>
+</html>
