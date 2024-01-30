@@ -2,7 +2,7 @@
 
 /* 基本 */
 :root {
-    --v-space: clamp(90px 9vw 120px);
+    --v-space: clamp(90px, 9vw, 120px);
 }
 body {
     margin: 0;
