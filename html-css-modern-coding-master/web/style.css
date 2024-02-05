@@ -138,6 +138,34 @@ img {
     padding-top: 0;
 }
 
+.posts-container {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 32px 25px;
+}
+
+.posts {
+	padding: var(--v-space) 0;
+	background-color: #f3f1ed;
+}
+
+/* 記事一覧の記事 */
+.post a {
+	display: block;
+}
+
+.post h3 {
+	margin: 1em 0 0.5em;
+	font-size: clamp(12px, 2vw, 20px);
+	min-height: 0vw;
+}
+
+.post p {
+	max-width: 20em;
+	font-size: clamp(10px, 1.6vw, 14px);
+	min-height: 0vw;
+}
+
 @media(min-width: 768px) {
     .imgtext-container {
         flex-direction: row;
@@ -153,6 +181,9 @@ img {
     .imgtext > .img{
         flex: 2;
     }
+    .posts-container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
 }
 
 /* タイトルとサブタイトル(赤色の短い線で装飾) */
@@ -185,6 +216,11 @@ img {
     background-color: #f3f1ed;
 }
 
+.post img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    width: 100%;
+}
 /* パーツの見出し */
 .heading {
     position: absolute;
@@ -199,4 +235,10 @@ img {
     display: block;
     color: #666666;
     font-size: 18px;
+}
+
+@supports not (aspect-ratio: 3 / 2) {
+    .post img {
+        height: 180px
+    }
 }
