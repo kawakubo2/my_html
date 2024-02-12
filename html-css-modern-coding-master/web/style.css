@@ -47,7 +47,7 @@ img {
 
 /* 横幅と左右の空白 */
 .w-container {
-    width: min(92%, 1166px);
+    width: min(92%, 1610px);
     margin: auto;
     position: relative;
 }
@@ -138,10 +138,22 @@ img {
     padding-top: 0;
 }
 
+/*
 .posts-container {
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 32px 25px;
+}
+*/
+
+.posts-container {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px 25px;
+}
+
+.posts-container > * {
+    width: 200px;
 }
 
 .posts {
@@ -181,9 +193,12 @@ img {
     .imgtext > .img{
         flex: 2;
     }
-    .posts-container {
+    /* .posts-container {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
+    .posts-container > * {
+        width: 33.33%;
+    } */
 }
 
 /* タイトルとサブタイトル(赤色の短い線で装飾) */
