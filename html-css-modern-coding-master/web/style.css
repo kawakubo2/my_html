@@ -9,8 +9,10 @@ body {
     background-color: #eeeeee;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1, h2, h3, h4, h5, h6, p, figure, ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 p {
@@ -199,6 +201,26 @@ img {
     .posts-container > * {
         width: 33.33%;
     } */
+
+    .footer-container {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+    }
+
+    .footer-container > .footer-site {
+        margin-bottom: 20px;
+    }
+
+    .footer-container > *:not(.footer-sns) {
+        justify-self: start;
+    }
+    .footer-container > .footer-sns {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        justify-self: end;
+        align-self: center;
+    }
 }
 
 /* タイトルとサブタイトル(赤色の短い線で装飾) */
@@ -224,6 +246,52 @@ img {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
 }
+
+/* フッタ */
+.footer {
+    padding: 70px 0;
+    background-color: #ffffff;
+    color: #707070;
+    font-size: 13px;
+}
+
+.footer-container {
+    display: grid;
+    gap: 50px;
+    justify-items: center;
+}
+
+/* フッタ: SNSメニュー */
+.footer-sns {
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
+}
+
+.footer-sns a {
+    display: grid;
+    width: 36px;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: #cccccc;
+    color: #ffffff;
+    clip-path: circle(50%);
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+    .footer-sns a {
+        height: 36px;
+    }
+}
+
+/* フッタ: テキストメニュー */
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 
 /* 記事一覧 */
 .posts {
