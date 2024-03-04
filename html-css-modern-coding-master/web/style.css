@@ -268,7 +268,7 @@ img {
     font-size: 24px;
 }
 
-.footer-sns a {
+/* .footer-sns a {
     display: grid;
     width: 36px;
     place-items: center;
@@ -276,6 +276,12 @@ img {
     background-color: #cccccc;
     color: #ffffff;
     clip-path: circle(50%);
+} */
+
+.footer-sns a {
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 @supports not (aspect-ratio: 1 / 1) {
@@ -286,8 +292,8 @@ img {
 
 /* フッタ: テキストメニュー */
 .footer-menu {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, auto));
     justify-content: center;
     gap: 20px;
 }
