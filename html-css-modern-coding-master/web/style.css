@@ -49,7 +49,7 @@ img {
 
 /* 横幅と左右の空白 */
 .w-container {
-    width: min(92%, 1610px);
+    width: min(92%, 1166px);
     margin: auto;
     position: relative;
 }
@@ -330,4 +330,21 @@ img {
     .post img {
         height: 180px
     }
+}
+
+/* 記事 */
+.entry {
+    padding-bottom: var(--v-space);
+    background-color: #ffffff;
+}
+
+.entry-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: calc(var(--v-space) * 2 / 3)
+}
+
+.entry .w-container {
+    max-width: 720px;
 }
