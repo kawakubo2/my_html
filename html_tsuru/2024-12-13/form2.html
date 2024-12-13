@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>form部品</h3>
+    <form>
+        <div class="container">
+            <label for="name">名前: </label><br />
+            <input type="text" name="name" id="name" />
+        </div>
+        <div class="container">
+            <label for="age">年齢: </label><br />
+            <input type="number" name="age" id="age">
+        </div>
+        <div class="container">
+            <label for="height">身長: </label><br />
+            <input type="number" name="height" id="height" step="0.5" />
+        </div>
+        <div class="container">
+            <label for="date">日付: </label><br />
+            <input type="date" name="date" id="date" />
+        </div>
+        <div class="container">
+            <label for="time">開始時刻: </label><br />
+            <input type="time" name="time" id="time" step="900"/>
+        </div>
+        <div class="container">
+            <label for="gender">性別: </label><br />
+            <select name="gender" id="gender">
+                <option value="">選択</option>
+                <option value="F">女性</option>
+                <option value="M">男性</option>
+                <option value="X">その他</option>
+            </select>
+        </div>
+        <div class="container">
+            習得言語: <br />
+            <label><input type="checkbox" name="lang" value="JavaScript" />JavaScript</label>
+            <label><input type="checkbox" name="lang" value="Python" />Python</label>
+            <label><input type="checkbox" name="lang" value="Java" />Java</label>
+            <label><input type="checkbox" name="lang" value="PHP" />PHP</label>
+            <label><input type="checkbox" name="lang" value="TypeScript"/>TypeScript</label>
+        </div>
+        <div class="container">
+            血液型: <br />
+            <label><input type="radio" name="bloodtype" value="A">A型</label>
+            <label><input type="radio" name="bloodtype" value="B">B型</label>
+            <label><input type="radio" name="bloodtype" value="AB">AB型</label>
+            <label><input type="radio" name="bloodtype" value="O">O型</label>
+        </div>
+        <input type="submit" value="送信" />
+    </form>
+</body>
+</html>
